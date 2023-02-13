@@ -14,3 +14,4 @@
 #### 10-no_mor_js -  Find and delete all files with a particular file extension with deleting directories and subdirectories
 #### 11-directories - Find and count all directories and subdirectories in a current directory
 #### 12-newest_files - Display the newest to the oldest files in the current directory in sorted order
+#### 13-unique - Displaying unique words in a files 
