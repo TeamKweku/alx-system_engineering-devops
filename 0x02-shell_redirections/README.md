@@ -26,3 +26,4 @@
 #### 22-users_and_homes - Display sorted users and home directories 
 #### 100-empty_casks - Finding empty files and directories and displaying on their names 
 #### 101-gifs - Listing all files with .gifs extension and subdirectories 
+#### 102-acrostic - A script that decodes acrostics
