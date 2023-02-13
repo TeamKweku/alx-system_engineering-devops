@@ -7,4 +7,4 @@
 #### 3-twofiles - Displays the content of two directories **/etc/passwd** and **etc/hosts** on the stdout
 #### 4-lastlines - Displays the last 10 lines of content in a file in a directory eg. **/etc/passwd**
 #### 5-firstlines - Displays the first 10 lines of content in a file in a directory eg. **/etc/passwd**
-
+#### 6-third_line - Displays the third line of the content of a file eg. *iacta*
