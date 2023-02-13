@@ -17,3 +17,4 @@
 #### 13-unique - Displaying unique words in a files 
 #### 14-findthatword - Display lines containing the pattern "root" from the file /etc/passwd
 #### 15-countthatword - Display the number of lines that contain a pattern "bin"
+#### 16-whatsnext -  Display lines containing a pattern and 3 lines after them in the file /etc/passwd
