@@ -16,4 +16,4 @@
 #### 12-newest_files - Display the newest to the oldest files in the current directory in sorted order
 #### 13-unique - Displaying unique words in a files 
 #### 14-findthatword - Display lines containing the pattern "root" from the file /etc/passwd
-
+#### 15-countthatword - Display the number of lines that contain a pattern "bin"
