@@ -15,3 +15,5 @@
 #### 11-directories - Find and count all directories and subdirectories in a current directory
 #### 12-newest_files - Display the newest to the oldest files in the current directory in sorted order
 #### 13-unique - Displaying unique words in a files 
+#### 14-findthatword - Display lines containing the pattern "root" from the file /etc/passwd
+
