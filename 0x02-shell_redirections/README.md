@@ -11,3 +11,4 @@
 ####
 #### 8-cwd_state - Redirect the out put of ls -la into a file called ls_cwd_content
 #### 9-duplicate_last_line - Duplicates the last line of a file 
+#### 10. Find and delete all files with a particular file extension with deleting directories and subdirectories
