@@ -8,7 +8,7 @@
 #### 4-lastlines - Displays the last 10 lines of content in a file in a directory eg. **/etc/passwd**
 #### 5-firstlines - Displays the first 10 lines of content in a file in a directory eg. **/etc/passwd**
 #### 6-third_line - Displays the third line of the content of a file eg. *iacta*
-####
+#### 7-file - Create a file name '\*\\'"Best School"\'\\*$\?\*\*\*\*\*:)' containing content "Best School"
 #### 8-cwd_state - Redirect the out put of ls -la into a file called ls_cwd_content
 #### 9-duplicate_last_line - Duplicates the last line of a file 
 #### 10-no_mor_js -  Find and delete all files with a particular file extension with deleting directories and subdirectories
