@@ -2,3 +2,4 @@
 # This README contains most of the basic shell redirection commands and the use cases
 
 #### 0-hello_world - prints the "Hello World" to stdout when executed
+#### 1-confused_smiley - prints a confused smiley on standard output that is "(Ôo)'
