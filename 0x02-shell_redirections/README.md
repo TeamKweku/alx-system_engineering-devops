@@ -10,3 +10,4 @@
 #### 6-third_line - Displays the third line of the content of a file eg. *iacta*
 ####
 #### 8-cwd_state - Redirect the out put of ls -la into a file called ls_cwd_content
+#### 9-duplicate_last_line - Duplicates the last line of a file 
