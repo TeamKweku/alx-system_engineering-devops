@@ -21,4 +21,5 @@
 #### 17-hidethisword - Display lines not containing "bin" from /etc/password
 #### 18-letteronly - Display all ines of the file starting with a letter both upper and lower for /etc/ssh/sshd_config
 #### 19-AZ - Replacing all characters A and c from input to Z and e respectively
-#### 20-hiago - Remove the occurance of characters "cC" from an input 
+#### 20-hiago - Remove the occurance of characters "cC" from an input
+#### 21-reverse - Reverse an input  
