@@ -11,4 +11,5 @@
 #### 8 - Adding a the number 128 to a global variable TRUEKNOWLEDGE
 #### 9-divide_and_rule - Dividing two global variables 
 #### 10-love_exponent_breath - Calculating the exponent of a global variable with another global variable
-#### 11-binary_to_decimal - How to convert a binary digit to decimal  
+#### 11-binary_to_decimal - How to convert a binary digit to decimal
+#### 12-combinations - Print all possible combinations of letters {a..z}{a..z} exempting "oo"  
