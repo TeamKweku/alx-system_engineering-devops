@@ -17,3 +17,4 @@
 #### 100-decimal_to_hexadecimal - How to convert decimal digit to hexadecimal 
 #### 101-rot13 - Encrypting a text with the rot13 encyption 
 #### 102-odd - Printing every other line from the input starting with the first line
+#### 103-water_and_stir - Add two numbers in environmental variables with different bases
