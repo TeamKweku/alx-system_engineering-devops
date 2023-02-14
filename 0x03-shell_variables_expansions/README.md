@@ -5,3 +5,4 @@
 #### 2-path - Appending a new path 
 #### 3-paths - To display a count of all the directories in the $PATH 
 #### 4-global_variables - Displaying all global variables to stdout
+#### 5-local_variables - Displaying all local, global environment variables and functions
