@@ -15,3 +15,4 @@
 #### 12-combinations - Print all possible combinations of letters {a..z}{a..z} exempting "oo"  
 #### 13-print_float - Printing a formatted digit in two decimal places
 #### 100-decimal_to_hexadecimal - How to convert decimal digit to hexadecimal 
+#### 101-rot13 - Encrypting a text with the rot13 encyption 
