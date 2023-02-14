@@ -8,3 +8,4 @@
 #### 5-local_variables - Displaying all local, global environment variables and functions
 #### 6-create_local_variable - Creating a local variable 
 #### 7-create_global_variable - Creating a global varible 
+#### 8 - Adding a the number 128 to a global variable TRUEKNOWLEDGE
