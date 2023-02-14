@@ -10,4 +10,5 @@
 #### 7-create_global_variable - Creating a global varible 
 #### 8 - Adding a the number 128 to a global variable TRUEKNOWLEDGE
 #### 9-divide_and_rule - Dividing two global variables 
-#### 10-love_exponent_breath - Calculating the exponent of a global variable with another global variable 
+#### 10-love_exponent_breath - Calculating the exponent of a global variable with another global variable
+#### 11-binary_to_decimal - How to convert a binary digit to decimal  
