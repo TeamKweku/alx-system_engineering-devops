@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Script to print a variable 10x to stdout
+
+var="Best School"
+n=0
+while [ "$n" -lt 10 ]; do
+	echo "$var"
+	n=$((n + 1))
+done
