@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# a bash script that displays "Best School" 10x
+
+var="Best School"
+n=1
+
+until [ "$n" -gt 10 ]; do
+	echo "$var"
+	n=$((n + 1))
+done
