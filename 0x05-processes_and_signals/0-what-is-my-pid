@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# a script that displays its own PID
+
+curr_pid=$$
+
+echo "$curr_pid"
