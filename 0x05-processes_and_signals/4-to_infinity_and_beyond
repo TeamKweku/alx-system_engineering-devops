@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# a script that displays "To infinity and beyond" indefinitely
+
+inif="To infinity and beyond"
+
+while true; do
+	echo "$inif"
+	sleep 2
+done
