@@ -1,0 +1,4 @@
+# Configuration for my server
+Host 18.206.202.36
+  IdentityFile ~/.ssh/school
+  PasswordAuthentication no
