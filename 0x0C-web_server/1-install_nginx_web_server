@@ -8,4 +8,4 @@ sudo sh -c 'echo "Hello World!" > /var/www/html/index.nginx-debian.html'
 
 
 # reload nginx configuration
-sudo service nginx reload
+sudo service nginx start
