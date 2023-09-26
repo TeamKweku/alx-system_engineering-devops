@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# a script to install nginx on a server
+
+sudo apt update && sudo apt install -y nginx
+
+# rewriting content of default nginx page
+sudo sh -c 'echo "Hello World!" > /var/www/html/index.nginx-debian.html'
+
+
+# reload nginx configuration
+sudo service nginx reload
