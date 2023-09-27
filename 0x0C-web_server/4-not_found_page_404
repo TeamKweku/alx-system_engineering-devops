@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# a script to install nginx on a server
+
+sudo apt update && sudo apt install -y nginx
+
+# rewriting content of default nginx page
+sudo ufw allow 'Nginx HTTP'
+echo "Hello World!" | sudo tee /var/www/html/index.nginx-debian.html
+
+sudo sed -i '/listen 80 default_server/a rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/not_found.html
+
+sudo sed -i "46i error_page 404 /not_found.html;" /etc/nginx/sites-available/default
+
+# reload nginx configuration
+sudo service nginx start
