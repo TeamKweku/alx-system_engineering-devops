@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+# configuring nginx and adding a custom header 
+
+sudo apt-get update & sudo apt-get install -y nginx
+
+# create the default html dir
+sudo mkdir -p /var/www/html
+
+#create default index.html file to server
+sudo touch /var/www/html/index.html
+sudo sh -c "echo 'Hello World!' > /var/www/html/index.html"
+
+#create default 404.html file to serve
+sudo touch /var/www/html/404.html
+sudo sh -c "echo 'Ceci n'est pas une page' > /var/www/html/404.html"
+
+# populate default nginx config in sites-available
+sudo sh -c 'printf %s "server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+    add_header X-Served-By '"$(hostname)"';
+    root   /var/www/html;
+    index  index.html index.htm;
+    location /redirect_me {
+        return 301 https://www.youtube.com/watch?v=xJJsoquu70o/;
+    }
+    error_page 404 /404.html;
+    location /404 {
+      root /var/www/html;
+      internal;
+    }
+}" > /etc/nginx/sites-available/default'
+
+sudo service nginx restart
