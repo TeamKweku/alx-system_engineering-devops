@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# fixing a bug of nginx server not listen on the default port 80
+sudo cp -r /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
+sudo service nginx restart
+pkill -o nginx # kill -9 "$(cat /run/nginx.pid)"
