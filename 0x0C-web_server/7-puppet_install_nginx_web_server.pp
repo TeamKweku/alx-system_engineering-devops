@@ -1,29 +1,49 @@
 # a puppet manifest that installs and configures nginx
+class nginx_config {
 
-# install nginx 
-class { 'nginx': }
+  package { 'nginx':
+    ensure => 'installed',
+  }
 
-# Configure Nginx to listen on port 80
-file {  '/etc/nginx/sites-available/default':
-  ensure  => file,
-  content => "server {\n  listen 80;\n  root /var/www/html;\n  index index.html;\n  location / {\n    add_header Content-Type text/html;\n    return 200 'Hello World!';\n  }\n  location /redirect_me {\n    return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n  }\n}\n",
+  file { '/var/www/html':
+    ensure => 'directory',
+  }
+
+  file { '/var/www/html/index.html':
+    content => 'Hello World!\n',
+  }
+
+  file { '/var/www/html/404.html':
+    content => "Ceci n'est pas une page\n",
+  }
+
+  file { '/etc/nginx/sites-available/default':
+    ensure  => 'file',
+    content => "
+      server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+        root /var/www/html;
+        index index.html index.htm;
+
+        location /redirect_me {
+          return 301 https://www.youtube.com/watch?v=xJJsoquu70o/;
+        }
+
+        error_page 404 /404.html;
+        location /404 {
+          root /var/www/html;
+          internal;
+        }
+      }
+    ",
+  }
+
+  service { 'nginx':
+    ensure  => 'running',
+    enable  => true,
+    require => File['/etc/nginx/sites-available/default'],
+  }
 }
 
-# Enable the default site
-nginx::resource::vhost { 'default':
-  ensure   => 'present',
-  www_root => '/var/www/html',
-}
-
-# Test the Nginx configuration and reload Nginx
-exec { 'nginx-config-test':
-  command => '/usr/sbin/nginx -t',
-  path    => '/usr/sbin:/usr/bin:/sbin:/bin',
-  notify  => Service['nginx'],
-}
-
-service { 'nginx':
-  ensure  => running,
-  enable  => true,
-  require => [File['/etc/nginx/sites-available/default'], Nginx::Resource::Vhost['default']],
-}
+include nginx_config
