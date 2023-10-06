@@ -8,7 +8,7 @@ domain_func ()
 
 if [ "$#" -eq 1 ]; then
   domain_func "$1" "www"
-  domain_func "$1" "lb-1"
+  domain_func "$1" "lb-01"
   domain_func "$1" "web-01"
   domain_func "$1" "web-02"
 elif [ "$#" -eq 2 ]; then
