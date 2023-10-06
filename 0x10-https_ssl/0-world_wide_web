@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+domain_func ()
+{
+  query=$(dig "$2.$1" | grep -A1 "ANSWER SECTION:" | tail -1)
+  echo "$2 $query" | awk '{print "The subdomain " $1 " is a " $5 " record and points to " $6}'
+}
+
+if [ "$#" -eq 1 ]; then
+  domain_func "$1" "www"
+  domain_func "$1" "lb-1"
+  domain_func "$1" "web-01"
+  domain_func "$1" "web-02"
+elif [ "$#" -eq 2 ]; then
+  domain_func "$1" "$2"
+else
+  echo "Invalid number of arguments. Usage: $0 <domain> [subdomain]"
+fi
