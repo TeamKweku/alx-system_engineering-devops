@@ -10,19 +10,18 @@ if __name__ == "__main__":
 
     user_id = int(sys.argv[1])
     api_endpoint = "{}/users/{}".format(url, user_id)
-    username = requests.get(api_endpoint).json().get("username")
+    user = requests.get(api_endpoint).json()
 
-    tasks_endpoint = "{}/todos".format(url)
+    tasks_endpoint = "{}/users/{}/todos".format(url, user_id)
     tasks = requests.get(tasks_endpoint).json()
     user_tasks = {
         user_id: [
             {
                 "tasks": task.get("title"),
                 "completed": task.get("completed"),
-                "username": username,
+                "username": user.get("username"),
             }
             for task in tasks
-            if task.get("userId") == user_id
         ]
     }
 
