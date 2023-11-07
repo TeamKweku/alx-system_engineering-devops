@@ -7,7 +7,7 @@ import requests
 
 def recurse(subreddit, hot_list=[], after=None):
     """Method that queries the reddit API for hot topics"""
-    url = "https://www.reddit.com/r/{}/hot.json?after={}".format(subreddit)
+    url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     headers = {"User-Agent": "MyBot/1.0"}
     params = {"after": after}
 
